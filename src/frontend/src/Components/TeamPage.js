@@ -28,25 +28,25 @@ export const TeamPage = () => {
         <h1>{team.teamName}</h1>
       </section>
       <section className="win-loss">
-        {" "}
-        Wins / Losses
         <PieChart
           data={[
-            { title: "Wins", value: team.totalWins, color: "#559c55" },
             {
               title: "Losses",
               value: team.totalMatches - team.totalWins,
               color: "#ac4646",
             },
+            { title: "Wins", value: team.totalWins, color: "#559c55" },
           ]}
         />
+        <p className="ratio-text">
+          {team.totalWins} Wins/ {team.totalMatches - team.totalWins} Losses
+        </p>
       </section>
       <section className="match-detail">
         <h4>Latest Match</h4>
         <MatchDetailCard teamName={team.teamName} match={team.matches[0]} />
       </section>
       <section className="match-small">
-        {" "}
         {team.matches.slice(1).map((m) => {
           return (
             <MatchSmallCard teamName={team.teamName} match={m} key={m.id} />

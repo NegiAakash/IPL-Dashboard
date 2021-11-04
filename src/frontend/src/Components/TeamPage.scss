@@ -24,7 +24,15 @@
         grid-column: span 1;
         justify-self: center ;
         align-self: center;
+        padding:50px;
+        
+        .ratio-text
+        {
+            font-size: 1.1rem;
+            // padding: 20px;
+        }
     }
+
     .match-detail
     {
         font-size: 1.5rem;
