@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 import "./MatchDetailCard.scss";
 
 export const MatchDetailCard = ({ teamName, match }) => {
+  const matchWon = teamName === match.matchWinner;
   if (!match) return null;
   const otherTeam = match.team1 === teamName ? match.team2 : match.team1;
   return (
-    <div className="MatchDetailCard">
+    <div
+      className={
+        matchWon ? "MatchDetailCard match-won" : "MatchDetailCard match-lost"
+      }
+    >
       <div className="innings-details">
         <h2>
           <span>VS</span> <Link to={`/team/${otherTeam}`}>{otherTeam}</Link>
@@ -24,6 +29,7 @@ export const MatchDetailCard = ({ teamName, match }) => {
         </div>
       </div>
 
+      {/* Can add man of the match firlds and empires field */}
       <div className="innings-extra-details">
         <span>
           First Innings : <p>{match.team1}</p>
