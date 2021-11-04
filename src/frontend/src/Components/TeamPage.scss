@@ -2,7 +2,7 @@
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 5px;
 
@@ -67,6 +67,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        
         // background-color: red;
         span
         {
@@ -77,6 +78,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         }
         span:hover
         {
@@ -87,3 +89,21 @@
         }
     }
 }
+
+.back{
+    position: absolute;
+    top: 50px;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: solid 1px #ccc;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.back:hover
+{
+    background: #ccc;
+    transition: 0.5s;
+}
+        

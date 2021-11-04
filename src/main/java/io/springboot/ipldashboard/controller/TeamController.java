@@ -1,7 +1,7 @@
 package io.springboot.ipldashboard.controller;
 
 import java.time.LocalDate;
-import java.util.List;
+import java.util.*;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +23,14 @@ public class TeamController {
     public TeamController(TeamRepository teamRepository, MatchRepository matchRepository) {
         this.teamRepository = teamRepository;
         this.matchRepository = matchRepository;
+    }
+
+    @GetMapping("/all")
+    public List<Team> getAllTeams() {
+        List<Team> t = new ArrayList<>();
+        this.teamRepository.findAll().forEach(p -> t.add(p));
+        return t;
+
     }
 
     @GetMapping("/team/{teamName}")
