@@ -15,7 +15,7 @@ export default function Teams() {
   return (
     <div className="">
       {" "}
-      <h2 className="team-text">IPL Dashboard</h2>
+      <h2 className="team-text">IPL Dashboard </h2>
       <div className="HomePage">
         {teams.map((team) => (
           <Link to={`/team/${team.teamName}`} key={team.id}>
