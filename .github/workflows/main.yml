@@ -72,10 +72,4 @@ jobs:
           # By default, this argument is set to "web".
           # For more information look at https://devcenter.heroku.com/articles/process-model
           process_type: web
-<<<<<<< HEAD
-=======
-          
-   
-          
->>>>>>> 23fcb82281600ec53b74af7df24a3654840cbf13
 ### ⬆ IMPORTANT PART ⬆ ###
