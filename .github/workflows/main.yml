@@ -30,7 +30,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build with maven
         working-directory: ../../
-        run: ./mvnw install
+        run: echo ls && ./mvnw install
 
       # Runs a set of commands using the runners shell
       
