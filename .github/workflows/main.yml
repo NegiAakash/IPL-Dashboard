@@ -26,9 +26,10 @@ jobs:
       - name: Build react app
         working-directory: ./src/frontend/
         run: npm install && npm install react-minimal-pie-chart && npm run build 
-
+        
       # Runs a single command using the runners shell
       - name: Build with maven
+        working-directory: ../../
         run: mvn install
 
       # Runs a set of commands using the runners shell
