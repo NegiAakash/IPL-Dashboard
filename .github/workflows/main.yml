@@ -26,8 +26,7 @@ jobs:
       - name: Build react app
         working-directory: ../../src/frontend/
         run: |
-          npm install,
-          npm run build 
+          npm install && npm run build 
 
       # Runs a single command using the runners shell
       - name: Build with maven
