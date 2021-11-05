@@ -16,6 +16,6 @@ on:
       - name: Build with Maven
         run: mvn install
       -name: Build React app
-        working-directory: ../../src/frontend/
+        working-directory: /src/frontend/
         run: npm install 
         run: cd src/frontend && npm run build
